@@ -8,7 +8,9 @@ const { act } = renderer;
 describe('Pruebas en ProductCard', () => {
   it('Debe renderizar el componente ', () => {
     const wrapper = renderer.create(
-      <ProductCard product={product1}>{() => <h1>ProductCard</h1>}</ProductCard>
+      <ProductCard product={product1}>
+        {() => <h1>Product Card</h1>}
+      </ProductCard>
     );
     expect(wrapper).toMatchSnapshot();
   });
